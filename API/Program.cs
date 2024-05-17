@@ -30,7 +30,16 @@ builder.Services.AddDbContext<PracticesContext>(options =>
     options.UseSqlServer(connectionString));
 
 // Configurar CORS para permitir todas las solicitudes
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+{
+options.AddPolicy("MyAllowedOrigins",
+    policy =>
+    {
+        policy.WithOrigins("https://localhost:5173") // note the port is included 
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 // Add services to the container.
 builder.Services.AddControllers();

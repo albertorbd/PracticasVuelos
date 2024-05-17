@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TQy3ympNVlLUM8JCdTWc8M/XE1Oeaj7YYJ9+imROrDzkG5LbLFUoQfaRHK7uDnBE/qEWZkrdp3prOpKxaaW8/A==",
+  "dgSpecHash": "hbVFzBPDxqnQCXuteJZx8bqS52lGJz4mPhPDGEepDcQkI4cdPYGnA1azzMQeGcwoDzU2GhZ0egiY1Me+8QFKFw==",
   "success": true,
-  "projectFilePath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\API\\Practices.API.csproj",
+  "projectFilePath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\API\\Practices.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mario\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

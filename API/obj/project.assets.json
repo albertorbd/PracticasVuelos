@@ -3402,11 +3402,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\practicas\\Practicas_API\\PracticasVuelos\\API\\Practices.API.csproj",
+      "projectUniqueName": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\API\\Practices.API.csproj",
       "projectName": "Practices.API",
-      "projectPath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\API\\Practices.API.csproj",
+      "projectPath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\API\\Practices.API.csproj",
       "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-      "outputPath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\API\\obj\\",
+      "outputPath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3421,8 +3421,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\practicas\\Practicas_API\\PracticasVuelos\\Business\\Practices.Business.csproj": {
-              "projectPath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\Business\\Practices.Business.csproj"
+            "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Business\\Practices.Business.csproj": {
+              "projectPath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Business\\Practices.Business.csproj"
             }
           }
         }

@@ -39,6 +39,7 @@ public class UsersController : ControllerBase
         try
         {
             var user = _userService.GetUserByEmail(userEmail);
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5173");
             return Ok(user);
         }
         catch (KeyNotFoundException knfex)

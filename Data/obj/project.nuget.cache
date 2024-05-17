@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xbptpksbwEpZKGjPb6ZHGBA/YZQ04DZw2dCKXqz+3qHKbbK7FrjTQb1XtKpiCF7wj+2yGHq+IDvHRVRE5+qxPQ==",
+  "dgSpecHash": "JQ08/2w5reYqhmSHbqgLfEafQdAjVyNmhpqEa9lyzCsjRY6ICLLvmkBUV0NaEr7deFgjwcxY16S2k87lqqcm4g==",
   "success": true,
-  "projectFilePath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\Data\\Practices.Data.csproj",
+  "projectFilePath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Data\\Practices.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

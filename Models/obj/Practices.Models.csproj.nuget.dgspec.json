@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\practicas\\Practicas_API\\PracticasVuelos\\Models\\Practices.Models.csproj": {}
+    "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Models\\Practices.Models.csproj": {}
   },
   "projects": {
-    "C:\\practicas\\Practicas_API\\PracticasVuelos\\Models\\Practices.Models.csproj": {
+    "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Models\\Practices.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\practicas\\Practicas_API\\PracticasVuelos\\Models\\Practices.Models.csproj",
+        "projectUniqueName": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Models\\Practices.Models.csproj",
         "projectName": "Practices.Models",
-        "projectPath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\Models\\Practices.Models.csproj",
+        "projectPath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Models\\Practices.Models.csproj",
         "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-        "outputPath": "C:\\practicas\\Practicas_API\\PracticasVuelos\\Models\\obj\\",
+        "outputPath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config"
