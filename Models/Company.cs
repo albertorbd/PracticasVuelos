@@ -9,13 +9,10 @@ public class Company
     public bool Website { get; set; }
     public List<Booking> Flights { get; set; }
 
-    public static int CompanyIdSeed { get; set; }
-
     public Company() {}
 
     public Company(string name, string password, string employeeCount, bool website) 
     {
-        Id = CompanyIdSeed++;
         Name = name;
         Password = password;
         FoundationDate = DateTime.Now;

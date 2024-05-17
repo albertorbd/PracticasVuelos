@@ -19,13 +19,10 @@ public class Booking
     public DateTime ReturnDate { get; set; }
     public double Amount { get; set; }
 
-    public static int BookingIdSeed { get; set; }
-
     public Booking() {}
 
     public Booking(string origin, string destination, DateTime departureDate, DateTime returnDate, double amount) 
     {
-        Id = BookingIdSeed++;
         Origin = origin;
         Destination = destination;
         DepartureDate = departureDate;

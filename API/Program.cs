@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Practices.Data;
 using Microsoft.EntityFrameworkCore;
+using Practices.Business;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddScoped<IUserRepository, UserEFRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 
 
