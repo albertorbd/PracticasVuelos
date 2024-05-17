@@ -24,7 +24,7 @@ builder.Services.AddScoped<ICompanyService, CompanyService>();
 
 
 
-var connectionString = builder.Configuration.GetConnectionString("ServerDB_localhost");
+var connectionString = builder.Configuration.GetConnectionString("ServerDB_dockernet");
 
 builder.Services.AddDbContext<PracticesContext>(options =>
     options.UseSqlServer(connectionString));

@@ -53,27 +53,25 @@ namespace Practices.Data
             _context.SaveChanges();
         }
 
-         public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters) 
+        public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters) 
         {
-            var query = _context.Bookings.AsQueryable();
-
-            query = _context.Bookings.Where(b => b.UserId == bookingsQueryParameters.UserId);
+            var query = _context.Bookings.Where(b => b.UserId == bookingsQueryParameters.UserId);
 
             if (bookingsQueryParameters.DepartureDate.HasValue)
             {
-                query = query.Where(t => t.DepartureDate >= bookingsQueryParameters.DepartureDate);
+                query = query.Where(t => t.DepartureDate >= bookingsQueryParameters.DepartureDate.Value);
             }
 
             if (bookingsQueryParameters.ReturnDate.HasValue)
             {
-                query = query.Where(t => t.ReturnDate <= bookingsQueryParameters.ReturnDate);
+                query = query.Where(t => t.ReturnDate >= bookingsQueryParameters.ReturnDate.Value);
             }
-            
+
             query = query.OrderBy(t => t.DepartureDate);
 
-            var result = query.ToList();
-            return result;
+            return query.ToList();
         }
+
 
     }   
 }

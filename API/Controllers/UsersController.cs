@@ -108,7 +108,7 @@ public class UsersController : ControllerBase
         }
     }
 
-    [HttpGet("MyBookings/{userId}")]
+    [HttpGet("MyBookings/")]
     public ActionResult<IEnumerable<Booking>> MyBookings([FromQuery] BookingsQueryParameters bookingsQueryParameters)
     {
         try {
