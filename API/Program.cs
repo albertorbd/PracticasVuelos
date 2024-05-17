@@ -1,3 +1,9 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using Practices.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,14 +13,29 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+
+builder.Services.AddScoped<IUserRepository, UserEFRepository>();
+
+
+
+var connectionString = builder.Configuration.GetConnectionString("ServerDB_localhost");
+
+builder.Services.AddDbContext<PracticesContext>(options =>
+    options.UseSqlServer(connectionString));
+
+// Configurar CORS para permitir todas las solicitudes
+builder.Services.AddCors();
+
+// Add services to the container.
+builder.Services.AddControllers();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

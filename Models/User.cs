@@ -1,22 +1,34 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Practices.Models;
 
 public class User
 {
+    [Key]
     public int Id { get; set; }
-    public string? Name { get; set; }
-    public string? Email { get; set; }
-    public string? Password { get; set; }
-    public string? Phone { get; set; }
-    public string? DNI { get; set; }
-    public List<Booking> MyBookings { get; set; }
 
-    public static int UserIdSeed { get; set; }
+    [Required]
+    public string? Name { get; set; }
+
+    [Required]
+    public string? Email { get; set; }
+
+    [Required]
+    public string? Password { get; set; }
+
+    [Required]
+    public string? Phone { get; set; }
+    
+    [Required]
+    public string? DNI { get; set; }
+
+    [Required]
+    public List<Booking> MyBookings { get; set; }
 
     public User() {}
 
     public User(string name, string email, string password, string phone, string dni) 
     {
-        Id = UserIdSeed++;
         Name = name;
         Email = email;
         Password = password;
