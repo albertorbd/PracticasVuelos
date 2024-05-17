@@ -33,23 +33,23 @@ public class UsersController : ControllerBase
         }
     }
 
-    [HttpGet("{userId}")]
-    public IActionResult GetUser(int userId)
+    [HttpGet("{userEmail}")]
+    public IActionResult GetUser(string userEmail)
     {
         try
         {
-            var user = _userService.GetUserById(userId);
+            var user = _userService.GetUserByEmail(userEmail);
             return Ok(user);
         }
         catch (KeyNotFoundException knfex)
         {
-            _logger.LogWarning($"No se ha encontrado el usuario con ID: {userId}. {knfex.Message}");
-           return NotFound($"No se ha encontrado el usuario con ID: {userId}. {knfex.Message}");
+            _logger.LogWarning($"No se ha encontrado el usuario con email: {userEmail}. {knfex.Message}");
+           return NotFound($"No se ha encontrado el usuario con email: {userEmail}. {knfex.Message}");
         }
         catch (Exception ex)
         {
-            _logger.LogError($"Error al obtener el usuario con ID: {userId}. {ex.Message}");
-            return BadRequest($"Error al obtener el usuario con ID: {userId}. {ex.Message}");
+            _logger.LogError($"Error al obtener el usuario con email: {userEmail}. {ex.Message}");
+            return BadRequest($"Error al obtener el usuario con email: {userEmail}. {ex.Message}");
         }
     }
 

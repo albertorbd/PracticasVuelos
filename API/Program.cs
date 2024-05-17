@@ -19,6 +19,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUserRepository, UserEFRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICompanyRepository, CompanyEFRepository>();
+builder.Services.AddScoped<ICompanyService, CompanyService>();
 
 
 

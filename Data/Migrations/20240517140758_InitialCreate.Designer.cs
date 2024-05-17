@@ -12,7 +12,7 @@ using Practices.Data;
 namespace Practices.Data.Migrations
 {
     [DbContext(typeof(PracticesContext))]
-    [Migration("20240517111741_InitialCreate")]
+    [Migration("20240517140758_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,9 +42,11 @@ namespace Practices.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Destination")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Origin")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ReturnDate")
@@ -106,15 +108,18 @@ namespace Practices.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("EmployeeCount")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("FoundationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Website")

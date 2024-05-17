@@ -24,11 +24,16 @@ namespace Practices.Data
             return users;
         }
 
-        public User GetUser(int userId)
+        public User GetUserById(int userId)
         {
             var user = _context.Users.FirstOrDefault(user => user.Id == userId);
             return user;
-            //.Include(u => u.Transactions).ToList();     Habra que poner esto para que no de null, probablemente al debugear funcionara, y al devolverlo con la api dara eror de referencia circular, habra que utilizar DTOs
+        }
+
+        public User GetUserByEmail(string userEmail)
+        {
+            var user = _context.Users.FirstOrDefault(user => user.Email.Equals(userEmail));
+            return user;
         }
 
         public void UpdateUser(User user)
@@ -38,7 +43,7 @@ namespace Practices.Data
         }
 
         public void DeleteUser(int userId) {
-            var user = GetUser(userId);
+            var user = GetUserById(userId);
             _context.Users.Remove(user);
             SaveChanges();
         }
