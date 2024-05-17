@@ -10,4 +10,5 @@ public interface IUserService
     public User GetUserByEmail(string userEmail);
     public void UpdateUser(int userId, UserCreateUpdateDTO UserCreateUpdateDTO);
     public void DeleteUser(int userId);
+    public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters);
 }

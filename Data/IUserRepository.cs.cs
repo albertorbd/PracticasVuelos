@@ -11,5 +11,5 @@ public interface IUserRepository
     public void DeleteUser(int userId);
     public void UpdateUser(User user);
     void SaveChanges();
-    /*public void AddBooking(Booking booking);*/
+    public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters);
 }

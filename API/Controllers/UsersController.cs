@@ -108,4 +108,18 @@ public class UsersController : ControllerBase
         }
     }
 
+    [HttpGet("MyBookings/{userId}")]
+    public ActionResult<IEnumerable<Booking>> MyBookings([FromQuery] BookingsQueryParameters bookingsQueryParameters)
+    {
+        try {
+            var userBookings = _userService.MyBookings(bookingsQueryParameters);
+            return Ok(userBookings);
+        }     
+        catch (Exception ex)
+        {
+            _logger.LogError($"Error al obtener las reservas del usuario {bookingsQueryParameters.UserId}. {ex.Message}");
+            return BadRequest($"Error al obtener las reservas del usuario {bookingsQueryParameters.UserId}. {ex.Message}");
+        }
+    }
+
 }

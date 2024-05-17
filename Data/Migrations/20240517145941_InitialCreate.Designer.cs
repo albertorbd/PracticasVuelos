@@ -12,7 +12,7 @@ using Practices.Data;
 namespace Practices.Data.Migrations
 {
     [DbContext(typeof(PracticesContext))]
-    [Migration("20240517140758_InitialCreate")]
+    [Migration("20240517145941_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

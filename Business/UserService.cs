@@ -68,5 +68,10 @@ public class UserService : IUserService
         }
         _userRepository.DeleteUser(userId);
     }
+
+    public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters)
+    {
+        return _userRepository.MyBookings(bookingsQueryParameters);
+    }
     
 }

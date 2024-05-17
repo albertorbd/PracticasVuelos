@@ -52,12 +52,28 @@ namespace Practices.Data
         {
             _context.SaveChanges();
         }
-/*
-        public void AddBooking(Booking booking)
+
+         public IEnumerable<Booking> MyBookings(BookingsQueryParameters bookingsQueryParameters) 
         {
-            _context.Booking.Add(booking);
-            SaveChanges();
-        }*/
+            var query = _context.Bookings.AsQueryable();
+
+            query = _context.Bookings.Where(b => b.UserId == bookingsQueryParameters.UserId);
+
+            if (bookingsQueryParameters.DepartureDate.HasValue)
+            {
+                query = query.Where(t => t.DepartureDate >= bookingsQueryParameters.DepartureDate);
+            }
+
+            if (bookingsQueryParameters.ReturnDate.HasValue)
+            {
+                query = query.Where(t => t.ReturnDate <= bookingsQueryParameters.ReturnDate);
+            }
+            
+            query = query.OrderBy(t => t.DepartureDate);
+
+            var result = query.ToList();
+            return result;
+        }
 
     }   
 }
