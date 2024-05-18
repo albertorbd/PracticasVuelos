@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oJEW9OHOmujB3Cb5reCkX/O70ZoPXHAYJw6BLgeLQ54p4s16H4mU1nzbrSuN0pcgCfGRbZRyFSJIEdAJCcz5Fw==",
+  "dgSpecHash": "586WnPHKDpsq1vCeq3rPg/54Qc7I4TEm/LmHcdL5urqqZKk04oj/jS4ovDabxizMXK+BYZtc+qq1HegjV6ZB/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Business\\Practices.Business.csproj",
+  "projectFilePath": "c:\\Users\\mario\\OneDrive\\Escritorio\\PracticasVuelos\\PracticasVuelos\\Business\\Practices.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mario\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\mario\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

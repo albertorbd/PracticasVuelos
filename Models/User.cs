@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Practices.Models;
 
@@ -22,7 +23,7 @@ public class User
     [Required]
     public string? DNI { get; set; }
 
-    [Required]
+    [JsonIgnore]
     public List<Booking> MyBookings { get; set; }
 
     public User() {}

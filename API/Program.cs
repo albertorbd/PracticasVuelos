@@ -35,7 +35,7 @@ builder.Services.AddCors(options =>
 options.AddPolicy("MyAllowedOrigins",
     policy =>
     {
-        policy.WithOrigins("https://localhost:5173") // note the port is included 
+        policy.WithOrigins("https://localhost:5173")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });

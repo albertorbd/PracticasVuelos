@@ -24,6 +24,7 @@ public class UsersController : ControllerBase
         try 
         {
             var users = _userService.GetAllUsers();
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5173");
             return Ok(users);
         }     
         catch (Exception ex)
@@ -114,6 +115,7 @@ public class UsersController : ControllerBase
     {
         try {
             var userBookings = _userService.MyBookings(bookingsQueryParameters);
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5173");
             return Ok(userBookings);
         }     
         catch (Exception ex)

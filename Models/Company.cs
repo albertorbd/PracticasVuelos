@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Practices.Models;
 public class Company
@@ -21,6 +22,7 @@ public class Company
     [Required]
     public bool Website { get; set; }
     
+    [JsonIgnore]
     public List<Booking> Flights { get; set; }
 
     public Company() {}

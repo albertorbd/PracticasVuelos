@@ -24,6 +24,7 @@ public class CompaniesController : ControllerBase
         try 
         {
             var companies = _companyService.GetAllCompanies();
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5173");
             return Ok(companies);
         }     
         catch (Exception ex)
@@ -39,6 +40,7 @@ public class CompaniesController : ControllerBase
         try
         {
             var company = _companyService.GetCompanyById(companyId);
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:5173");
             return Ok(company);
         }
         catch (KeyNotFoundException knfex)

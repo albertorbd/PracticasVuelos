@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "5009b754-0a55-4932-9dbd-a06b885cfa86",
+		"name": "Practices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34989300"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetAllUsers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 May 2024 08:23:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Mario\",\n        \"email\": \"mario@gmail.com\",\n        \"password\": \"mario12345\",\n        \"phone\": \"4574\",\n        \"dni\": \"32452464D\",\n        \"myBookings\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Carlos\",\n        \"email\": \"carlos@gmail.com\",\n        \"password\": \"carlos12345\",\n        \"phone\": \"4567477\",\n        \"dni\": \"23523562D\",\n        \"myBookings\": null\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Fernando\",\n        \"email\": \"fernando@gmail.com\",\n        \"password\": \"fernando12345\",\n        \"phone\": \"4745\",\n        \"dni\": \"23526445X\",\n        \"myBookings\": null\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Eduardo\",\n        \"email\": \"eduardo@gmail.com\",\n        \"password\": \"eduardo12345\",\n        \"phone\": \"4574548\",\n        \"dni\": \"52353425D\",\n        \"myBookings\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Users/mario%40gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Users",
+						"mario%40gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetUser",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/Users/mario%40gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Users",
+								"mario%40gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 May 2024 08:23:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:5173"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Mario\",\n    \"email\": \"mario@gmail.com\",\n    \"password\": \"mario12345\",\n    \"phone\": \"4574\",\n    \"dni\": \"32452464D\",\n    \"myBookings\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Alberto\",\r\n  \"email\": \"alberto@gmail.com\",\r\n  \"password\": \"alberto12345\",\r\n  \"phone\": \"12345\",\r\n  \"dni\": \"456795ruhet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Alberto\",\r\n  \"email\": \"alberto@gmail.com\",\r\n  \"password\": \"alberto12345\",\r\n  \"phone\": \"12345\",\r\n  \"dni\": \"2wqd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Users/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Users",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Users/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
