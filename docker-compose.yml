@@ -1,0 +1,33 @@
+version: '3.4'
+ 
+networks:
+    practices:    
+        driver: bridge  
+
+volumes:
+    db-data-practices:
+ 
+services:
+    db:
+        image: mcr.microsoft.com/mssql/server:2019-CU21-ubuntu-20.04
+        restart: always
+        ports:
+            - 81:1433
+        environment:
+            - ACCEPT_EULA=Y
+            - MSSQL_SA_PASSWORD=a24746@svalero.com
+        networks:
+            - practices
+        volumes:
+            - db-data-practices:/var/opt/mssql
+    api:
+        restart: unless-stopped 
+        ports:
+            - 80:80 
+        build:
+          context: .
+          dockerfile: API/Dockerfile
+        depends_on:
+            - db
+        networks:
+            - practices

@@ -1,21 +1,34 @@
-﻿namespace Practices.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
+namespace Practices.Models;
 public class Company
 {
+    [Key]
     public int Id { get; set; }
-    public string? Name { get; set; }
-    public string? Password { get; set; }
-    public DateTime FoundationDate { get; set; }
-    public string? EmployeeCount { get; set; }
-    public bool Website { get; set; }
-    public List<Booking> Flights { get; set; }
 
-    public static int CompanyIdSeed { get; set; }
+    [Required]
+    public string? Name { get; set; }
+
+    [Required]
+    public string? Password { get; set; }
+
+    [Required]
+    public DateTime FoundationDate { get; set; }
+
+    [Required]
+    public string? EmployeeCount { get; set; }
+
+    [Required]
+    public bool Website { get; set; }
+    
+    [JsonIgnore]
+    public List<Booking> Flights { get; set; }
 
     public Company() {}
 
     public Company(string name, string password, string employeeCount, bool website) 
     {
-        Id = CompanyIdSeed++;
         Name = name;
         Password = password;
         FoundationDate = DateTime.Now;
